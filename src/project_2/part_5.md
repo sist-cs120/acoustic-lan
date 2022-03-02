@@ -1,1 +1,32 @@
-# Part 5 macping Utility
+## Part 5. (2 points) macping Utility
+
+macping utility is used to measure the round trip delay between two nodes in _Athernet_. The utility is similar to ping utility in current operating systems, but it is specialized for _Athernet_ and works in a different layer.
+
+The working flow of macping utility:
+
+- macping is invoked by executing macping dest\_address
+- A macping frame is generated with zero MAC payload and the type field of the MAC frame is set to type: MACPING\_REQ.
+- The macping frame is timestamped when sending into the PHY layer.
+- The node with dest\_address is responsible for automatically replying a frame targeting the sender and having its type field set to type: MACPING\_REPLY.
+- If the sender receives MACPING\_REPLY, it calculates and prints the round trip delay on the screen.
+- If the sender does not receive MACPING\_REPLY after 2 seconds, the sender prints TIMEOUT on screen.
+
+Checkpoints:
+
+The group provides two devices: NODE1, NODE2.
+
+The topology is shown in Figure 7.
+
+CK(2 points). TAs will check the functionality of macping utility in the following case:
+
+NODE1: macpingNODE2
+
+NODE2: macperfNODE1
+
+TAs record the RTT of NODE1 to NODE2 and the throughput of NODE3
+
+| NODE1 RTT \&lt; 150 ms &amp;&amp; NODE2 TH \&gt; 2.0kbps | 100% |
+| --- | --- |
+| otherwise | 0% |
+
+(Tasks with &quot;Optional&quot; tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them)
