@@ -21,6 +21,6 @@ NODE2: macperf NODE1
 
 TAs record the throughput of NODE1 and NODE3.
 
-| If NODE1 TH \&gt;1.0kbps &amp;&amp; NODE2 TH\&gt;1.0kbps | 100% |
+| If NODE1 TH >1.0kbps && NODE2 TH>1.0kbps | 100% |
 | --- | --- |
 | otherwise | 0% |

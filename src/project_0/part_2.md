@@ -2,7 +2,7 @@
 
 Knowing how to play and recode sound does not help in generating a correct sound signal. The later task is more about calculation and matching sampling rate. Suppose the sound you want to generate is f(t) and the DAC uses sample rate fs. Filling digital samples f(0), f(1/fs), f(2/fs), …, f(n/fs) into the DAC buffer will generate correct sound signal f(t) for the speaker. In this procedure, f(t) is sampled into discrete samples at rate fs.
 
-DAC&#39;s sample rates are fixed values such as 8kHz, 16kHz, 44.1kHz, 48kHz, etc. These values are internally determined by the hardware. Choose fs from the supported rates as your desired sample rate, because any sample rates other than the supported ones are to be converted by the operating system or the media player, which could bring unexpected problems.
+DAC's sample rates are fixed values such as 8kHz, 16kHz, 44.1kHz, 48kHz, etc. These values are internally determined by the hardware. Choose fs from the supported rates as your desired sample rate, because any sample rates other than the supported ones are to be converted by the operating system or the media player, which could bring unexpected problems.
 
 Checkpoints:
 

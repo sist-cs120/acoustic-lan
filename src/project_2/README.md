@@ -10,7 +10,7 @@ Suggested workload: 6 FULL days
 
 - This project is to be completed by each group **individually**.
 - Submit your code through Blackboard. The submission is performed by one of the group members.
-- Each group needs to submit the code **once and only once**. Immediately after TAs&#39; checking.
+- Each group needs to submit the code **once and only once**. Immediately after TAs' checking.
 
 ## Overview
 
@@ -30,7 +30,7 @@ Contact TAs to borrow the accessory set.
 
 Figure 1 Project2 Overview
 
-(Hierarchy of Tasks. Tasks are graded according to their hierarchy. A full score of one part automatically guarantees the full score of its subparts. In this project, Part 1 is a subpart of Part 2 and Part 3. Part 2 is a subpart of Part 3. The hierarchy is denoted as Part1\&lt;Part2\&lt;Part3.)
+(Hierarchy of Tasks. Tasks are graded according to their hierarchy. A full score of one part automatically guarantees the full score of its subparts. In this project, Part 1 is a subpart of Part 2 and Part 3. Part 2 is a subpart of Part 3. The hierarchy is denoted as Part1<Part2<Part3.)
 
 ### Reference and Useful Links
 

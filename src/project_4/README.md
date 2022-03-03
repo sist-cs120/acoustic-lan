@@ -10,11 +10,11 @@ Suggested workload: 2~4 FULL days
 
 - This project is to be completed by each group **individually**.
 - Submit your code through Blackboard. The submission is performed by one of the group members.
-- Each group needs to submit the code **once and only once**. Immediately after TAs&#39; checking.
+- Each group needs to submit the code **once and only once**. Immediately after TAs' checking.
 
 ### Overview
 
-The goal of this project is to enrich Athernet Nodes&#39;s applications by providing the File Transfer Protocol (FTP) service. We are going to implement an FTP client for Athernet Node. After this project, Athernet Node is able to connect to public FTP servers.
+The goal of this project is to enrich Athernet Nodes's applications by providing the File Transfer Protocol (FTP) service. We are going to implement an FTP client for Athernet Node. After this project, Athernet Node is able to connect to public FTP servers.
 
 ![](RackMultipart20220302-4-f4xz1s_html_96754fcdfa49fe37.png)
 
@@ -26,7 +26,7 @@ FTP is a protocol targeting file transfer between clients and servers. We have f
 
 Unlike previous projects, FTP is a well-defined, yet quite simple protocol. Its RFC [1] is the most accurate and detailed description for guiding the implementation, thus this project description only contains a necessary introduction. As we are not going to implement an FTP server, the client part (USER-FTP) is the main focus.
 
-At a high level, the design philosophy of FTP is simple and direct. The client uses one TCP connection (to server&#39;s port 21) to send/receive control commands/replies, and uses one or more other TCP connections to receive/upload file data. In other words, FTP&#39;s control and data planes are decoupled.
+At a high level, the design philosophy of FTP is simple and direct. The client uses one TCP connection (to server's port 21) to send/receive control commands/replies, and uses one or more other TCP connections to receive/upload file data. In other words, FTP's control and data planes are decoupled.
 
 There are several FTP control commands, such as USER, PASS, PWD, CWD, PASV, LIST, RETR, STOR, etc. These commands and their responses are text-based and very similar to those used in Telnet and HTTP. Some of the commands (e.g., LIST: list current directory, RETR: download data, STOR: upload data) can initiate data transmission. Once these commands are executed, the client and server must negotiate new TCP connections to hold the data transmission. There are two methods to negotiate new TCP connections: the Passive Mode (the client connects to the port chosen by the server) and the Active Mode (server uses port 20 to connect to the port chosen by the client). Since the Athernet Node must pass through the NAT to reach the Internet, Passive Mode is the only choice if you are not going implement a stateful NAT (a stateful NAT is able to recognize/remember/modify FTP packets and open correct ports for translating connections initiated by the server in the Active Mode).
 
@@ -40,7 +40,7 @@ The Network Topology is shown in Figure 2
 
 The group provides two devices: NODE1 and NODE2.
 
-NODE3 is a public FTP Server, which supports anonymous login. The list of suggested test FTP Servers is given in &quot;serverlist.txt&quot;.
+NODE3 is a public FTP Server, which supports anonymous login. The list of suggested test FTP Servers is given in 'serverlist.txt'.
 
 CK (6 points).
 
@@ -73,19 +73,19 @@ b. You can use existing FTP clients to see how they handle the input.
 
 One possible implementation of Part 1 satisfying the check points is to make the NAT as an FTP proxy. The NAT decodes Athernet packets and, according the content, issues FTP commands locally to the remote server. However, an NAT should not work beyond the IP layer. A more serious concern is security. It does not make sense to let the NAT know your FTP password and the implementation cannot be extended to secure FTP protocols that widely used today, e.g., SFTP. In short, the NAT should be transparent to the FTP protocol. It is the Athernet Note that makes TCP connections to the FTP server other than the NAT node.
 
-Therefore, the first component of this part is an Athernet TCP stack. FTP is based on TCP, but a full TCP stack is very complicated. In order to simplify the implementation, a simplified TCP stack in Athernet is needed to keep necessary components in TCP: connection establishment, connection termination, and sliding window. For connection establishment and connection termination, you only need to consider common cases in the TCP state machine (see lecture slides). The sliding window can be simplified to a &quot;stop-and-wait&quot; protocol, where the Athernet Node generates and replies TCP acks like a &quot;stop-and-wait&quot; protocol. The second component of this part is the FTP stack based on the TCP stack. The protocol state machine is provided by the FTP RFC file in the reference link.
+Therefore, the first component of this part is an Athernet TCP stack. FTP is based on TCP, but a full TCP stack is very complicated. In order to simplify the implementation, a simplified TCP stack in Athernet is needed to keep necessary components in TCP: connection establishment, connection termination, and sliding window. For connection establishment and connection termination, you only need to consider common cases in the TCP state machine (see lecture slides). The sliding window can be simplified to a 'stop-and-wait' protocol, where the Athernet Node generates and replies TCP acks like a 'stop-and-wait' protocol. The second component of this part is the FTP stack based on the TCP stack. The protocol state machine is provided by the FTP RFC file in the reference link.
 
-The check procedures and requirements of part 2 are identical to part 1. Their hierarchy is part1\&lt; part2. The reason for splitting Part 2 from Part 1 is to emphasis the design philosophy of network protocols and also to ease this project. TAs are responsible for checking where the TCP and FTP stack is implemented.
+The check procedures and requirements of part 2 are identical to part 1. Their hierarchy is part1< part2. The reason for splitting Part 2 from Part 1 is to emphasis the design philosophy of network protocols and also to ease this project. TAs are responsible for checking where the TCP and FTP stack is implemented.
 
 ### Part 3. (0 point) Every End is a New Beginning
 
 Return what you borrowed to TAs after finishing checking Project4. Ensure your borrowed accessories are in good condition, as they will be reused in future semesters. TAs will provide a handy plastic bag for each group to pack up the returned accessories. The last step is to sign off at the record card in the plastic bag.
 
-(Tasks with &quot;Optional&quot; tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check any optional parts (of this or previous projects) on/before Jan. 10.)
+(Tasks with 'Optional' tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check any optional parts (of this or previous projects) on/before Jan. 10.)
 
 ### Part 4. (Optional + 2 points) Athernet Tunnel
 
-FTP is a classic network protocol. Many FTP client and server tools/programs exist. So the second way to enable FTP client on Athernet Nodes is to reuse existing ones (e.g. FileZilla client, ftp in linux, etc.). The problem is that the default network traffic goes through system&#39;s network stack (e.g. through socket), but not the acoustic channel. If the FTP server&#39;s IP address is known, it is possible to redirect all the traffic from/to the FTP server to a local agent/proxy program through iptables, (the port used in FTP can be found through netstat). Then, the proxy program redirects the traffic to Athernet. In this case, the FTP client works through an Athernet Tunnel.
+FTP is a classic network protocol. Many FTP client and server tools/programs exist. So the second way to enable FTP client on Athernet Nodes is to reuse existing ones (e.g. FileZilla client, ftp in linux, etc.). The problem is that the default network traffic goes through system's network stack (e.g. through socket), but not the acoustic channel. If the FTP server's IP address is known, it is possible to redirect all the traffic from/to the FTP server to a local agent/proxy program through iptables, (the port used in FTP can be found through netstat). Then, the proxy program redirects the traffic to Athernet. In this case, the FTP client works through an Athernet Tunnel.
 
 Checkpoints:
 
@@ -97,7 +97,7 @@ Use 1000 to 2000 words to summarize your projects (Project1 to Project4). The co
 
 Checkpoints:
 
-Upload your report to the homework assignment named &quot;Final Report&quot;. Each group only need to submit it once.
+Upload your report to the homework assignment named 'Final Report'. Each group only need to submit it once.
 
 CK(4 points).
 

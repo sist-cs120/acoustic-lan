@@ -16,7 +16,7 @@ The goal of this task is to help you polish your physical layer code. Making a c
 - Buffer: PHYRxFrame, is shared between PHY.Rx thread and MAC thread. Once a frame is correctly received by the physical layer, PHY.Rx thread will put the frame into this buffer.
 - Event: RX\_DONE, is issued by PHY.Rx thread, it notifies MAC thread to take the frame in PHYRxFrame and proceed to FrameDetection state.
 
-It is easy to extend the send-and-pray protocol to a more effective one: stop-and-wait ACK protocol. &quot;Upgrading&quot; the physical link in Project1 with ACK ability will provide reliability in data communication. A reference stop-and-wait protocol is shown in Figure 4.
+It is easy to extend the send-and-pray protocol to a more effective one: stop-and-wait ACK protocol. 'Upgrading' the physical link in Project1 with ACK ability will provide reliability in data communication. A reference stop-and-wait protocol is shown in Figure 4.
 
 ![](RackMultipart20220302-4-19oxl2x_html_4baae2d3e9586ef1.png)
 
@@ -28,25 +28,25 @@ Checkpoints:
 
 The group provides two devices: NODE1 and NODE2, connected by two cables.
 
-CK1(2 points). Similar to Part 1. TAs provide a binary file &quot;INPUT.bin&quot; which contains 6250 bytes. NODE1 sends bits according to this file. NODE2 stores the received bytes into a binary file &quot;OUTPUT.bin&quot;.
+CK1(2 points). Similar to Part 1. TAs provide a binary file 'INPUT.bin' which contains 6250 bytes. NODE1 sends bits according to this file. NODE2 stores the received bytes into a binary file 'OUTPUT.bin'.
 
 The transmission must be finished within 20 seconds.
 
 | Transmission Time | Points |
 | --- | --- |
-| \&lt;10s | 100% |
+| <10s | 100% |
 | [0, 10s] | 100% |
 | (10s, 15s] | 80% |
 | (15s, 20s] | 50% |
-| \&gt;20s | 0% |
+| >20s | 0% |
 
 TAs compare the difference between INPUT.bin and OUTPUT.bin:
 
-| \&lt;100% | \*0% |
+| <100% | \*0% |
 | --- | --- |
 | 100% | \*100% |
 
-CK2(2 points). Redo CK2. TAs can unplug one of the wires, and the transmitter should be able to identify the event and display &quot;link error&quot; (according to retransmission times).
+CK2(2 points). Redo CK2. TAs can unplug one of the wires, and the transmitter should be able to identify the event and display 'link error' (according to retransmission times).
 
 Tips:
 

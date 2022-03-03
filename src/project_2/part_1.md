@@ -8,13 +8,13 @@ The electric signal output from the Speaker port is normally used to stimulate t
 
 Figure 2 Wire Connection
 
-In this part, your task is to set up the wired link between two nodes. This task is almost the same as Project1.Part3, but we expect higher performance (\&gt;5kbps).
+In this part, your task is to set up the wired link between two nodes. This task is almost the same as Project1.Part3, but we expect higher performance (>5kbps).
 
 Checkpoints:
 
 The group provides two devices: NODE1 and NODE2, connected by audio cables.
 
-CK(4 points). TAs provide a binary file &quot;INPUT.bin&quot; which contains 6250 Bytes. NODE1 sends bits according to this file. NODE2 stores the received bytes into a binary file &quot;OUTPUT.bin&quot;.
+CK(4 points). TAs provide a binary file 'INPUT.bin' which contains 6250 Bytes. NODE1 sends bits according to this file. NODE2 stores the received bytes into a binary file 'OUTPUT.bin'.
 
 The transmission must be finished within 20 seconds.
 
@@ -23,19 +23,19 @@ The transmission must be finished within 20 seconds.
 | [0, 10s] | 100% |
 | (10s, 15s] | 80% |
 | (15s, 20s] | 50% |
-| \&gt;20s | 0% |
+| >20s | 0% |
 
 TAs compare the difference between INPUT.bin and OUTPUT.bin:
 
 | Accuracy | Points |
 | --- | --- |
-| \&lt;80% | \*0% |
+| <80% | \*0% |
 | 80% to 99% | \*80% |
-| \&gt;99% | \*100% |
+| >99% | \*100% |
 
 Tips:
 
-a. You are recommended to unplug the chargers/power adapters of your devices when doing wired experiments. The reason is that different AC-to-DC adapters (especially the ones without ground plugin) may have different voltages of their &quot;ground&quot;, so do the &quot;ground&quot; of the charging devices. When interconnecting two devices with wires, they may have different &quot;ground&quot;. In some cases, the problem just results in biased DC levels in the received signal from connected devices. Sometimes it may bring harmful damages. If you have to connect two devices with different &quot;ground&quot; (e.g., a charging laptop and a desktop), you should be very careful.
+a. You are recommended to unplug the chargers/power adapters of your devices when doing wired experiments. The reason is that different AC-to-DC adapters (especially the ones without ground plugin) may have different voltages of their 'ground', so do the 'ground' of the charging devices. When interconnecting two devices with wires, they may have different 'ground'. In some cases, the problem just results in biased DC levels in the received signal from connected devices. Sometimes it may bring harmful damages. If you have to connect two devices with different 'ground' (e.g., a charging laptop and a desktop), you should be very careful.
 
 b. The throughput can be increased by modifying your physical layer (PHY) of project 1, e.g., decrease the time for each symbol. You can also develop a new PHY suitable for the wired situation.
 

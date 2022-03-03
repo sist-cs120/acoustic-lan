@@ -12,13 +12,13 @@ The group provides the interface to connect the jamming source.
 
 The topology is shown in Figure 7.
 
-CK(4 points). &quot;INPUT1to2.bin&quot; of 2MB and &quot;INPUT2to1.bin&quot; of 1MB are provided.
+CK(4 points). 'INPUT1to2.bin' of 2MB and 'INPUT2to1.bin' of 1MB are provided.
 
 NODE1: transmits INPUT1to2.bin to NODE2, store the received file to OUTPUT2to1.bin
 
 NODE2: transmits INPUT2to1.bin to NODE1, store the received file to OUTPUT1to2.bin
 
-Jamming Src: play &quot;Jamming.wav&quot;
+Jamming Src: play 'Jamming.wav'
 
 The transmission of NODE2 must be started immediately after the start of NODE1. The transmission of NODE2 must be finished before NODE1. The received files must be error free. The rank is determined by the transmission time of NODE1.
 

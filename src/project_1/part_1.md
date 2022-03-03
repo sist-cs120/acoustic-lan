@@ -2,7 +2,7 @@
 
 **Modulation**. You can choose one of the modulation methods from lecture slides or other resources (see wiki [9] or reference links [8]). There is no best choice for all situations, but there exist good ones for certain situations. For our project, FSK is easy to implement and PSK can reach high throughput. ASK is not recommended. This project description uses PSK as an example.
 
-In PSK, suppose phase 0 is used to represent &quot;0&quot; and phase pi is used to represent &quot;1&quot;. It is easy to imagine that the wave for conveying bits is the concatenation of several wave segments in Figure 2.
+In PSK, suppose phase 0 is used to represent '0' and phase pi is used to represent '1'. It is easy to imagine that the wave for conveying bits is the concatenation of several wave segments in Figure 2.
 
 ![](RackMultipart20220302-4-iik7fu_html_76955159c989f910.png)
 
@@ -27,19 +27,19 @@ Checkpoints:
 
 The group provides two devices: NODE1 and NODE2
 
-CK1(5 points). The TA provides a TXT file &quot;INPUT.txt&quot; which contains 10000 &quot;0&quot;s or &quot;1&quot;s. NODE1 sends bits according to this file. NODE2 stores the received bits into a TXT file &quot;OUTPUT.txt&quot;. During the transmission, TAs keep quiet.
+CK1(5 points). The TA provides a TXT file 'INPUT.txt' which contains 10000 '0's or '1's. NODE1 sends bits according to this file. NODE2 stores the received bits into a TXT file 'OUTPUT.txt'. During the transmission, TAs keep quiet.
 
 The transmission must be finished within 15 seconds.
 
-| \&lt;15s | -0% |
+| <15s | -0% |
 | --- | --- |
-| \&gt;15s | -100% |
+| >15s | -100% |
 
-TAs compare the difference between INPUT.txt and OUTPUT.txt through a tool similar to &quot;diff&quot;:
+TAs compare the difference between INPUT.txt and OUTPUT.txt through a tool similar to 'diff':
 
-| \&lt;80% | -100% |
+| <80% | -100% |
 | --- | --- |
 | 80% to 99% | -20% |
-| \&gt;99% | -0% |
+| >99% | -0% |
 
-(Tasks with &quot;Optional&quot; tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them. Part 4 is checked by TAs)
+(Tasks with 'Optional' tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them. Part 4 is checked by TAs)

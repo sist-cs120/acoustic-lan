@@ -25,8 +25,8 @@ NODE2: macperfNODE1
 
 TAs record the RTT of NODE1 to NODE2 and the throughput of NODE3
 
-| NODE1 RTT \&lt; 150 ms &amp;&amp; NODE2 TH \&gt; 2.0kbps | 100% |
+| NODE1 RTT < 150 ms && NODE2 TH > 2.0kbps | 100% |
 | --- | --- |
 | otherwise | 0% |
 
-(Tasks with &quot;Optional&quot; tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them)
+(Tasks with 'Optional' tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them)
