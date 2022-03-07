@@ -6,11 +6,6 @@ Due Date: Oct. 17, 2021
 
 Suggested workload: 4~6 FULL days
 
-Please read the following instructions carefully:
-
-    This project is to be completed by each group individually.
-    Submit your code through Blackboard. The submission is performed by one of the group members.
-    Each group needs to submit the code once and only once. Immediately after TAs' checking.
 
 Overview
 

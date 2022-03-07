@@ -3,8 +3,8 @@
 [Introduction](./README.md)
 
 - [Project 0 Setup](./project_0/README.md)
-    - [Understanding Your Tools](./project_0/part_1.md)
-    - [Generating the Correct Tone](./project_0/part_2.md)
+    - [Forming a Group](./project_0/part_1.md)
+    - [Understanding Your Tools](./project_0/part_2.md)
 - [Project 1 Acoustic Link](./project_1/README.md)
     - [Modulation and Demodulation](./project_1/part_1.md)
     - [Frame Detection](./project_1/part_2.md)
