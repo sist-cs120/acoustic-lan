@@ -17,13 +17,8 @@ Now you know how to generate the modulated signals. The next step is to translat
 
 **Demodulation**. Demodulation is the inverse process of modulation. For PSK, multiply the received signal by the carrier wave will reveal the conveyed symbols. See the lecture slides or reference links for more information.
 
-Tips:
 
-a. Do not use very long frames. This is because the ADC/DAC rates of different devices are slightly different (i.e., frequency offset). For a one-second recoding, the number of samples from different devices may have differences up to ~100 samples, which will affect the synchronization for long frames.
-
-b. Do not use a very short header. Speaker takes time to warm up (see ringing effect [1]).
-
-Checkpoints:
+### Checkpoints
 
 The group provides two devices: NODE1 and NODE2
 
@@ -43,3 +38,9 @@ TAs compare the difference between INPUT.txt and OUTPUT.txt through a tool simil
 | >99% | -0% |
 
 (Tasks with 'Optional' tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them. Part 4 is checked by TAs)
+
+### Tips
+
+a. Do not use very long frames. This is because the ADC/DAC rates of different devices are slightly different (i.e., frequency offset). For a one-second recoding, the number of samples from different devices may have differences up to ~100 samples, which will affect the synchronization for long frames.
+
+b. Do not use a very short header. Speaker takes time to warm up (see ringing effect [1]).

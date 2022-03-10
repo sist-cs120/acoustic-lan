@@ -19,7 +19,6 @@ athernet --node 1 --record 10
 athernet --node 1 --play <frequency> --record 10
 ```
 
-### Grading
 Checkpoint | Points
 -----------|-------
 1          | 1
