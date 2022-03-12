@@ -44,5 +44,3 @@ athernet --demodulate --input modulated.csv --output demodulated.bin
 
 
 ### Tips
-
-- Do not use very long frames. This is because the ADC/DAC rates of different devices are slightly different (i.e., frequency offset). For a one-second recoding, the number of samples from different devices may have differences up to ~100 samples, which will affect the synchronization for long frames.
