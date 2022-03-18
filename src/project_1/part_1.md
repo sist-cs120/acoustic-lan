@@ -25,16 +25,16 @@ Demodulation is the inverse process of modulation. For PSK, multiply the receive
 - NODE1: A single computer performing modulation and demodulation.
 
 
-### Checkpoints
-1. TA provides a binary file `digital.bin` as the input, (a sequence of random bits). NODE1 modulates `digital.bin` into real numbers, and outputs to `modulated.csv`, which is a csv file containing floating point numbers in each line. Taking `modulated.csv` as input, NODE1 then demodulates the signal and outputs to `demodulated.bin`. Compare `digital.bin` and `demodulated.bin`, the 2 files should be exactly the same.
+### Checkpoints (Autograded)
+1. Autograder generates a binary file `input.bin` as the input, (a sequence of random bits). NODE1 modulates `input.bin` into real numbers, and outputs to `modulated.csv`, which is a csv file containing floating point numbers in each line. Taking `modulated.csv` as input, NODE1 then demodulates the signal and outputs to `output.bin`. Compare `input.bin` and `output.bin`, the 2 files should be exactly the same.
 
 ```sh
-athernet --modulate --input digital.bin --output modulated.csv
-athernet --demodulate --input modulated.csv --output demodulated.bin
+athernet --modulate --input input.bin --output modulated.csv
+athernet --demodulate --input modulated.csv --output output.bin
 
 # Optionally, make your program take input from stdin and output to stdout.
-# athernet --modulate < digital.bin | athernet --demodulate > demodulated.bin
-# diff digital.bin demodulated.bin
+# athernet --modulate < input.bin | athernet --demodulate > output.bin
+# diff input.bin output.bin
 ```
 
 | Identical? | Points |

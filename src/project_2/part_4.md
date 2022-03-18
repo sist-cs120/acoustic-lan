@@ -1,6 +1,6 @@
 ## Part 5. (2 points) macping Utility
 
-macping utility is used to measure the round trip delay between two nodes in _Athernet_. The utility is similar to ping utility in current operating systems, but it is specialized for _Athernet_ and works in a different layer.
+macping utility is used to measure the round trip delay between two nodes in *Athernet*. The utility is similar to ping utility in current operating systems, but it is specialized for *Athernet* and works in a different layer.
 
 The working flow of macping utility:
 
@@ -11,17 +11,16 @@ The working flow of macping utility:
 - If the sender receives MACPING\_REPLY, it calculates and prints the round trip delay on the screen.
 - If the sender does not receive MACPING\_REPLY after 2 seconds, the sender prints TIMEOUT on screen.
 
-Checkpoints:
+### Devices
+- NODE1: macping
+- NODE2: macperf
 
-The group provides two devices: NODE1, NODE2.
+### Checkpoints
+
 
 The topology is shown in Figure 7.
 
 CK(2 points). TAs will check the functionality of macping utility in the following case:
-
-NODE1: macpingNODE2
-
-NODE2: macperfNODE1
 
 TAs record the RTT of NODE1 to NODE2 and the throughput of NODE3
 
