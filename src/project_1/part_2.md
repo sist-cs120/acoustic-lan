@@ -1,24 +1,24 @@
-## Part 2 Frame Detection
+## Frame Detection
 
 A problem with excessively long frame is that the sender and receiver could get out of sync. This is because the ADC/DAC rates of different devices are slightly different i.e., frequency offset. For a one-second recoding, the number of samples from different devices may have differences up to ~100 samples. Depending on the modulation technique you use, this may have an adverse effect on the accuracy of the transmitted data. Take PSK for example, if the sender and the receiver is skewed by half a cycle of the carrier wave, then a `1` will be interpreted `0` and vice versa.
 
 To combat this issue, we periodically synchronize the receiver and sender. We do this by adding a **preamble** and keeping frames short. A preamble is distinctive pattern that signals the beginning of a frame. Unlike Ethernet preamble, which is a unique bit sequence, we'll use analog signals to represent the preamble. A preamble that has worked well for most student in past semesters is a sinusoid with first increasing then decreasing frequencies. Frame detection usually starts by collecting samples into a buffer. Once the buffer is filled enough samples (longer than the length of the preamble), repeatedly compute the **autocorrelation** of the received signal with the preamble, i.e. taking the dot product of the collected samples and the predefined preamble samples. The autocorrelation is significantly larger when the collected samples exactly matches the preamble than when the samples are slightly shifted, or is computed against some random noise. Thus we can detect the presence of a frame by setting a threshold on the autocorrelation. Once the occurrence of a new frame is confirmed, the next thing is to find out the accurate boundaries of the symbol. You can develop your own way. One suggested way is to leverage autocorrelation again. A unique and long preamble can help to find out the accurate boundary of the frame. See the Matlab example to see how to design a unique header.
 
 
-**Adding a Header**. A header of a frame is used to help the receiver to find out the accurate start of a frame, i.e. synchronize to the frame. Therefore, the header is normally a predefined special wave pattern that can help with synchronization. After adding the header, samples that you are going to fill into the DAC may have the structure in Figure 3:
+- **Adding a Header**. A header of a frame is used to help the receiver to find out the accurate start of a frame, i.e. synchronize to the frame. Therefore, the header is normally a predefined special wave pattern that can help with synchronization. After adding the header, samples that you are going to fill into the DAC may have the structure in Figure 3:
 
 ![](RackMultipart20220302-4-iik7fu_html_ab6f260d556ba0b9.png)
 
 Figure 3 Adding a Header
 
-**Frame Detection**. When the receiver receives enough samples, the first thing is to determine whether there is something transmitting. One method is to correlate the predefined header with the received samples. When the samples contains a frame, correlation will have high energy. Use this feature as the indicator of the occurrence of a frame.
+- **Frame Detection**.
 
-**Synchronization**.
+- **Synchronization**.
 
 ### Devices
 - NODE1: computer for frame detection.
 
-### Checkpoints (semi-autograded)
+### Checkpoints
 - Plot the shape of your preamble (lineplot).
     - The y-axis should be the sample value.
     - The x-axis should be the sample index (time).
@@ -33,7 +33,7 @@ Figure 3 Adding a Header
     - Autograder inserts random silence in between frames, add guassian noise, and writes output to `perturbed.csv`.
     - NODE1 takes `perturbed.csv`, demodulates frames into `output.bin`
     - Autograder compares `input.bin` and `output.bin`.
-    - The 2 files should be identical.
+    - **The 2 files should be identical.**
 
 ### Tips
 - Do not use a very short header. Speaker takes time to warm up (see ringing effect [1]).

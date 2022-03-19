@@ -1,4 +1,4 @@
-## Part 1. (3 points) Understanding Your Tools
+## Understanding Your Tools
 
 In this part, your task is to use the chosen audio interface to correctly control your sound card's ADC and DAC to play digital samples through speaker and to record analog sound signals from microphone. Playing and recoding should be able to work simultaneously, as the transmitter and the receiver of a network card normally works simultaneously. You can use two independent threads to play and record sound simultaneously.
 

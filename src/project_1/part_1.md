@@ -1,4 +1,4 @@
-## Part 1. Modulation and Demodulation
+## Modulation and Demodulation
 
 In this part you will perform modulation and demodulation. That is, converting digital signals into analog waves. For modulation, Your program should take binary files as input and output a csv containing real values. For demodulation, your program should take a csv file containing floating point numbers as input and output the demodulated file. You won't need to fiddle with the speaker and microphone just yet.
 
@@ -13,20 +13,18 @@ Figure 2 PSK Example
 Further, suppose the carrier wave is 10 kHz and the bit rate is 1000 Hz, each wave segment in Figure 2 lasts for 1/1000 s, i.e., there are 10 cycles of the carrier wave in each segment. Similarly, if you want to reduce the bit rate to 500 Hz, each wave segment should last for 1/500 s, and there are 20 cycles in each segment. On the other hand, if the carrier wave is 20 kHz, the number of the cycles are doubled in the above description.
 
 
-- **Demodulation**
-
-Now you know how to generate the modulated signals. The next step is to translate the signals into digital samples, so that DAC can play it. You have finished this step in Part2.
-
-Demodulation is the inverse process of modulation. For PSK, multiply the received signal by the carrier wave will reveal the conveyed symbols. See the lecture slides or reference links for more information.
-
-
+**Demodulation**. Now you know how to generate the modulated signals. The next step is to translate the signals into digital samples, so that DAC can play it. You have finished this step in Part2. Demodulation is the inverse process of modulation. For PSK, multiply the received signal by the carrier wave will reveal the conveyed symbols. See the lecture slides or reference links for more information.
 
 ### Devices
 - NODE1: A single computer performing modulation and demodulation.
 
-
-### Checkpoints (Autograded)
-1. Autograder generates a binary file `input.bin` as the input, (a sequence of random bits). NODE1 modulates `input.bin` into real numbers, and outputs to `modulated.csv`, which is a csv file containing floating point numbers in each line. Taking `modulated.csv` as input, NODE1 then demodulates the signal and outputs to `output.bin`. Compare `input.bin` and `output.bin`, the 2 files should be exactly the same.
+### Checkpoints
+- Autograder generates a binary file `input.bin` as the input, (a sequence of random bits).
+- NODE1 modulates `input.bin` into real numbers, and outputs to `modulated.csv`
+    - a csv file containing floating point numbers in each line.
+- Taking `modulated.csv` as input, NODE1 then demodulates the signal and outputs to `output.bin`.
+- Autograder compare `input.bin` and `output.bin`.
+- **The 2 files should be exactly the same.**
 
 ```sh
 athernet --modulate --input input.bin --output modulated.csv
@@ -36,11 +34,5 @@ athernet --demodulate --input modulated.csv --output output.bin
 # athernet --modulate < input.bin | athernet --demodulate > output.bin
 # diff input.bin output.bin
 ```
-
-| Identical? | Points |
-| ---------- | ------ |
-| Yes        | 1      |
-| No         | 0      |
-
 
 ### Tips
