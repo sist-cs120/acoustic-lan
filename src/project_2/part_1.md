@@ -19,7 +19,6 @@ The electric signal output from the Speaker port is normally used to stimulate t
     - In project 1, we use carrier wave to convey information over the air wirelessly. In project 2, it is not necessary to so. You can directly use line code and transmit the baseband signal in the wire, which might be more efficient.
 
 
-
 ### Devices
 - NODE1: sender
 - NODE2: receiver

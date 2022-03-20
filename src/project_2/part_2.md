@@ -1,4 +1,4 @@
-## Part 2. (6 points) A Simple Reliable Link
+## A Simple Reliable Link
 
 To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray protocol. A state machine is helpful in describing a protocol. The state machine of the send-and-pray protocol is shown in Figure 3. The node can only be in one of the states at any moment. The transition of the state is driven by some events. The arrows connecting states identify the event and the transition direction.
 

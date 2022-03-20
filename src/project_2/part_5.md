@@ -1,6 +1,4 @@
-## Part 6. (Optional + 2 points) Collision Detection
-
-## Part 3. (2 points) CSMA
+## CSMA/CD
 
 In order to efficiently support multiple nodes in the shared communication medium, their transmissions should be carefully coordinated. There are many different MAC protocols. The one we choose in _Athernet_ is CSMA, which is widely used in Ethernet and Wi-Fi.
 

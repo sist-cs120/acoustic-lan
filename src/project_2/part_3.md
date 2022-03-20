@@ -1,4 +1,4 @@
-## Part 4. (2 point) macperf Utility
+## `macperf` Utility
 
 macperf utility is used to measure the throughput between two nodes in _Athernet_. The utility is similar to the iperf utility, but it is specialized for _Athernet_ and works in a different layer.
 
@@ -9,7 +9,11 @@ The working flow of macperf utility:
 - The sender tries its best to send out macperf packets
 - The sender counts and prints the throughput on the screen every one second.
 
-Checkpoints:
+### Devices
+- NODE1: macperf
+- NODE2: macperf
+
+### Checkpoints:
 
 The group provides two devices: NODE1, NODE2. The topology is shown in Figure 7 without jamming source.
 

@@ -1,4 +1,4 @@
-## Part 5. (2 points) macping Utility
+## `macping` Utility
 
 macping utility is used to measure the round trip delay between two nodes in *Athernet*. The utility is similar to ping utility in current operating systems, but it is specialized for *Athernet* and works in a different layer.
 
