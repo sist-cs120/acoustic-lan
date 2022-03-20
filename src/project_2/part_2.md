@@ -1,6 +1,6 @@
 ## A Simple Reliable Link
 
-To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray protocol. A state machine is helpful in describing a protocol. The state machine of the send-and-pray protocol is shown in Figure 3. The node can only be in one of the states at any moment. The transition of the state is driven by some events. The arrows connecting states identify the event and the transition direction.
+Up till now, we have been using an unreliable link to transmit data. If the physical frame is corrupted or dropped, there is way of knowing it. Thus the goal of this part to implement a reliable link. To ensure data integrity, add a checksum field to your mac frame. Additionally, the receiver should send an ACK frame to the sender acknowledging the frame is received correctly. We do not impose restriction on the implementation of your reliable link. Whether it is half or full duplex, since there are now 2 channels (wires) instead of 1 (air). To get you bootstrapped, take a look at the simple stop-and-wait state machine defined in the [appendix](/project_2/appendix.md).
 
 ### Tips
 - You may want to use thread safe data structures in delivering data between threads.
@@ -25,10 +25,10 @@ To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray pro
 
 | Transmission Time t | Percentage |
 | ------------------- | ---------- |
-| 0 < t < 10s         | 100%       |
-| 10s < t < 15s       | 80%        |
-| 15s < t < 20s       | 50%        |
-| t >20s              | 0%         |
+| 0 < t < 8s          | 100%       |
+| 8s < t < 12s        | 80%        |
+| 12s < t < 16s       | 50%        |
+| t > 16s             | 0%         |
 
 - Accuracy requirement
 

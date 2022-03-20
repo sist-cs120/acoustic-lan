@@ -13,7 +13,7 @@ The working flow of macperf utility:
 - NODE1: send macperf packets to NODE2
 - NODE2: send macperf packets to NODE1
 
-### Checkpoint:
+### Checkpoint
 
 The group provides two devices: NODE1, NODE2. The topology is shown in Figure 7 without jamming source.
 
