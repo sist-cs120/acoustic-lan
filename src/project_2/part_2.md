@@ -24,34 +24,43 @@ Figure 4 Stop-and-wait State Machine
 
 The state machine contains more states and events than send-and-pray protocol. One obvious difference is that, after correctly receiving a frame, the node needs to reply an ACK immediately. Note that the state machine does not contain full details of this protocol. For example, when handling Tx\_DONE event, MAC thread should set timeout counter for waiting ACK, and if the ACK is not received, the packet should be retransmitted.
 
-Checkpoints:
+### Tips
+- You may want to use thread safe data structures in delivering data between threads.
+- The inter-frame time and time-out time should be carefully designed (refer to Lec5 and Lec6).
+- You may want to use a Tee to connect the signal
 
-The group provides two devices: NODE1 and NODE2, connected by two cables.
+### Devices
+- NODE1: sender
+- NODE2: receiver
 
-CK1(2 points). Similar to Part 1. TAs provide a binary file 'INPUT.bin' which contains 6250 bytes. NODE1 sends bits according to this file. NODE2 stores the received bytes into a binary file 'OUTPUT.bin'.
+### Checkpoint 1
+- TA provides a random seed
+- Autograder generates `input.bin` (1000 bytes) on both nodes using the provided seed.
+- Initiate NODE2, wait for NODE1 to start transmission
+- Initiate NODE1, start transmission. Timer starts.
+- Wait for both nodes to finish.
+    - Timer stops.
+    - **Both node should exit gracefully (0 exit code, no crash, no exception) after transmission is completed.**
+- NODE2 writes received data into `output.bin`
+- NODE2 Autograder compares `input.bin` and `output.bin`.
+- Timing requirement
 
-The transmission must be finished within 20 seconds.
+| Transmission Time t | Percentage |
+| ------------------- | ---------- |
+| 0 < t < 10s         | 100%       |
+| 10s < t < 15s       | 80%        |
+| 15s < t < 20s       | 50%        |
+| t >20s              | 0%         |
 
-| Transmission Time | Points |
-| --- | --- |
-| <10s | 100% |
-| [0, 10s] | 100% |
-| (10s, 15s] | 80% |
-| (15s, 20s] | 50% |
-| >20s | 0% |
+- Accuracy requirement
 
-TAs compare the difference between INPUT.bin and OUTPUT.bin:
+| Accuracy a    | Percentage |
+| ------------- | ---------- |
+| a < 80%       | 0%         |
+| 80% < a < 99% | 80%        |
+| a > 99%       | 100%       |
 
-| <100% | \*0% |
-| --- | --- |
-| 100% | \*100% |
-
-CK2(2 points). Redo CK2. TAs can unplug one of the wires, and the transmitter should be able to identify the event and display 'link error' (according to retransmission times).
-
-Tips:
-
-a. You may want to use thread safe data structures in delivering data between threads.
-
-b. The inter-frame time and time-out time should be carefully designed (refer to Lec5 and Lec6).
-
-c. You may want to use a Tee to connect the signal
+### Checkpoint 2
+- Redo Checkpoint 1
+- While transimission is in progress, TA unplug one of the wires.
+- NODE1 should identify link failure and display `link error`. (according to retransmission times)

@@ -18,7 +18,7 @@ Figure 3 Adding a Header
 ### Devices
 - NODE1: computer for frame detection.
 
-### Checkpoints
+### Checkpoint
 - Plot the shape of your preamble (lineplot).
     - The y-axis should be the sample value.
     - The x-axis should be the sample index (time).

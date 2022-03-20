@@ -15,7 +15,7 @@ The working flow of macping utility:
 - NODE1: macping
 - NODE2: macperf
 
-### Checkpoints
+### Checkpoint
 
 
 The topology is shown in Figure 7.

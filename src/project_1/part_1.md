@@ -18,7 +18,7 @@ Further, suppose the carrier wave is 10 kHz and the bit rate is 1000 Hz, each wa
 ### Devices
 - NODE1: A single computer performing modulation and demodulation.
 
-### Checkpoints
+### Checkpoint
 - Autograder generates a binary file `input.bin` as the input, (a sequence of random bits).
 - NODE1 modulates `input.bin` into real numbers, and outputs to `modulated.csv`
     - a csv file containing floating point numbers in each line.

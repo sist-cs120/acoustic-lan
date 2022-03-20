@@ -7,7 +7,7 @@ Knowing how to play and recode sound does not help in generating a correct sound
 ### Devices
 - NODE1: computer for playing and recording sound
 
-### Checkpoints:
+### Checkpoint:
 
 1. NODE1 is able to play signal: f(t) = sin (2pi/1000\*t) + sin (2pi/10000\*t). TAs use spectrum analyzer to check the frequencies of the sound signal.
 2. NODE1 record the voice from TA (10 seconds) and then play the recorded signals. (1 point)

@@ -13,7 +13,7 @@ The working flow of macperf utility:
 - NODE1: macperf
 - NODE2: macperf
 
-### Checkpoints:
+### Checkpoint:
 
 The group provides two devices: NODE1, NODE2. The topology is shown in Figure 7 without jamming source.
 

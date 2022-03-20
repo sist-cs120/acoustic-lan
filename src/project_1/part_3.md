@@ -7,7 +7,7 @@ Since we are only concerned about building a physical link so far, there is no n
 - NODE1: computer for sending data
 - NODE2: computer for receiving data
 
-### Checkpoints
+### Checkpoint
 - TA provides a random seed
 - Autograder generates `input.bin` (1000 bytes) on both nodes using the provided seed.
 - Initiate NODE2, wait for NODE1 to start transmission
