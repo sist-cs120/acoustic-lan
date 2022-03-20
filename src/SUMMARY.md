@@ -18,6 +18,7 @@
     - [Ping Utility](./project_2/part_4.md)
     - [CSMA/CD](./project_2/part_5.md)
     - [Performance Rank*](./project_2/part_6.md)
+    - [Appendix](./project_2/appendix.md)
 - [Project 3 Gateway](./project_3/README.md)
     - [Socket Programming](./project_3/part_1.md)
     - [NAT](./project_3/part_2.md)

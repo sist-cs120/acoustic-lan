@@ -10,8 +10,8 @@ The working flow of macperf utility:
 - The sender counts and prints the throughput on the screen every one second.
 
 ### Devices
-- NODE1: macperf
-- NODE2: macperf
+- NODE1: send macperf packets to NODE2
+- NODE2: send macperf packets to NODE1
 
 ### Checkpoint:
 
