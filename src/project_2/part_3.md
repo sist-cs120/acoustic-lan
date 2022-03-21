@@ -1,30 +1,22 @@
-## `macperf` Utility
+## MacPerf Utility
 
-macperf utility is used to measure the throughput between two nodes in _Athernet_. The utility is similar to the iperf utility, but it is specialized for _Athernet_ and works in a different layer.
-
-The working flow of macperf utility:
-
-- macperf is invoked by executing macperf dest\_address
-- By default, macperf frame is generated with random MAC payload (choose your own payload size) and the type field of the MAC frame is set to type: DATA.
-- The sender tries its best to send out macperf packets
-- The sender counts and prints the throughput on the screen every one second.
+In this part of the project, you will implement a command to measure the throughput of your (reliable) acoustic link, similar to the [iperf](iperf.fr) utility. The difference, though, is that this command works in the link layer, instead of the network/transport layer.
+macperf utility is used to measure the throughput between two nodes in *Athernet*. By default, MacPerf frames are generated with random payload size. The sender should try its best to send out MacPerf frames, and prints the throughput on the screen every second. 'Throughput' here is measured by the total payload size successfully acked within the 1 second window.
 
 ### Devices
-- NODE1: send macperf packets to NODE2
-- NODE2: send macperf packets to NODE1
+- NODE1: sends macperf packets to NODE2, prints throughput every second
+- NODE2: sends macperf packets to NODE1, prints throughput every second
 
 ### Checkpoint
+- TA run MacPerf utility on both nodes
+- TA records the throughput of both nodes for 10 seconds
+- **The 10 throughput printings on both nodes should be consistently larger than 1 kbps.**
 
-The group provides two devices: NODE1, NODE2. The topology is shown in Figure 7 without jamming source.
 
-CK(2 points). TAs will check the functionality of macping utility in the following case:
+```sh
+## NODE1
+athernet --node 1 --macperf 2
 
-NODE1: macperf NODE2
-
-NODE2: macperf NODE1
-
-TAs record the throughput of NODE1 and NODE3.
-
-| If NODE1 TH >1.0kbps && NODE2 TH>1.0kbps | 100% |
-| --- | --- |
-| otherwise | 0% |
+## NODE2
+athernet --node 2 --macperf 1
+```
