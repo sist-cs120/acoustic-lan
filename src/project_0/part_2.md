@@ -4,26 +4,25 @@ In this part, your task is to use the chosen audio interface to correctly contro
 
 Knowing how to play and recode sound does not help in generating a correct sound signal. The later task is more about calculation and matching sampling rate. Suppose the sound you want to generate is f(t) and the DAC uses sample rate fs. Filling digital samples f(0), f(1/fs), f(2/fs), …, f(n/fs) into the DAC buffer will generate correct sound signal f(t) for the speaker. In this procedure, f(t) is sampled into discrete samples at rate fs.
 
+You should calculate the sample values by yourself (according to the tone of the frequency and your device sample rate), and write directly to the sample buffer! DO NOT use a high-level library that takes tone frequency, duration, or media file (e.g. wav file) as input, and plays the tone for you. THIS WILL NOT WORK FOR LATER TASKS.
+
 ### Devices
 - NODE1: computer for playing and recording sound
 
-### Checkpoint:
+### Checkpoint
 
-1. NODE1 is able to play signal: f(t) = sin (2pi/1000\*t) + sin (2pi/10000\*t). TAs use spectrum analyzer to check the frequencies of the sound signal.
-2. NODE1 record the voice from TA (10 seconds) and then play the recorded signals. (1 point)
-3. NODE1 play a predefined sound and record the played sound at the same time. TA may say something during the recording. After 10 seconds, stop playing and recording. Then play the recorded sound for verification.
+- NODE1 is able to play signal: f(t) = sin (2pi/1000\*t) + sin (2pi/10000\*t). TAs use spectrum analyzer to check the frequencies of the sound signal.
+- NODE1 record the voice from TA (10 seconds) and then play the recorded signals.
+- NODE1 play a predefined sound and record the played sound at the same time.
+    - TA may say something during the recording.
+    - After 10 seconds, stop playing and recording.
+    - Then play the recorded sound for verification.
 
 ```sh
-athernet --node 1 --play 1000,10000
-athernet --node 1 --record 10
-athernet --node 1 --play <frequency> --record 10
+athernet --play 1000,10000
+athernet --record 10
+athernet --play <frequency> --record 10
 ```
-
-Checkpoint | Points
------------|-------
-1          | 1
-2          | 1
-3          | 1
 
 ### Tips
 - Be careful about stereo settings. We only need one track.

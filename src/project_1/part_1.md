@@ -27,12 +27,12 @@ Further, suppose the carrier wave is 10 kHz and the bit rate is 1000 Hz, each wa
 - **The 2 files should be exactly the same.**
 
 ```sh
-athernet --modulate --input input.bin --output modulated.csv
-athernet --demodulate --input modulated.csv --output output.bin
+athernet --modulate < input.bin > modulated.csv
+athernet --demodulate < modulated.csv > output.bin
 
-# Optionally, make your program take input from stdin and output to stdout.
+# One-liner using pipes
 # athernet --modulate < input.bin | athernet --demodulate > output.bin
-# diff input.bin output.bin
+# autograder.py --diff input.bin output.bin
 ```
 
 ### Tips

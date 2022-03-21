@@ -35,5 +35,14 @@ Figure 3 Adding a Header
     - Autograder compares `input.bin` and `output.bin`.
     - **The 2 files should be identical.**
 
+```sh
+athernet --modulate --framed < input.bin > framed.csv
+autograder.py --perturb < framed.csv > perturbed.csv
+athernet --demodulate --framed < perturbed.csv > output.bin
+
+# One-liner using pipes
+# athernet --modulate --framed < input.bin | autograder.py --perturb | athernet --demodulate > output.bin
+# autograde.py --diff input.bin output.bin
+```
 ### Tips
 - Do not use a very short header. Speaker takes time to warm up (see ringing effect [1]).

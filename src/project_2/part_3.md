@@ -7,6 +7,16 @@ macperf utility is used to measure the throughput between two nodes in *Athernet
 - NODE1: sends macperf packets to NODE2, prints throughput every second
 - NODE2: sends macperf packets to NODE1, prints throughput every second
 
+### Example
+```
+# MacPerf output
+# {seconds since program start}, {total packets sent}, {total packets acked}, {throughput in kbps}
+1.00, 3, 3, 1.203
+2.01, 7, 7, 1.512
+3.00, 10, 9, 0.987
+...
+```
+
 ### Checkpoint
 - TA run MacPerf utility on both nodes
 - TA records the throughput of both nodes for 10 seconds

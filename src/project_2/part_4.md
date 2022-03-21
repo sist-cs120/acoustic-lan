@@ -8,8 +8,19 @@ For example, add a MACPING/MACPONG type to the frame type field. The sender send
 - NODE1: send macping packets to NODE2, prints latency for every MacPing frame successfully replied.
 - NODE2: send macperf packest to NODE1, prints throughput every second.
 
+### Example
+```
+# MacPing output
+# {seconds since program start}, {total pings sent}, {total pongs received}, {round trip time in microseconds}
+1.00, 8, 8, 110
+2.01, 16, 16, 90
+3.00, 24, 24, 101
+...
+```
+
 ### Checkpoint
-- TA run macperf command on NODE2, and macping command on NODE1
+- TA run macperf command on NODE2
+- TA run macping command on NODE1
 - TA record the round trip time of NODE1 to NODE2 and the throughput of NODE3 for 10 seconds
 - **NODE1 round trip time printings should be consistently lesser than 150 ms.**
 - **NODE2 throughput printings should be consistently larger than 2 kbps.**

@@ -16,3 +16,4 @@ Projects will also contain optional checkpoints, which are labeled with `*`. Man
 - Submit your code through Blackboard.
 - Submission is performed by one of the group members.
 - Each group needs to submit the code once and only once. Immediately after TAs' checking.
+- Both members should be present on the day checking.

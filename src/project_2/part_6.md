@@ -2,30 +2,18 @@
 
 Network systems always demand high performance, but high performance is hard to achieve. This task is to reward groups who will have achieved high throughput performance. In the first round, top 5 groups are selected according to their throughput performance in Part3. The second round will be held on the lecture, the final rank is determined by the performance in the second round.
 
-### Checkpoint:
+### Checkpoint
+- Redo [Part 5](/project_1/part_5.md) checkpoint
+- `input1.bin` is now 2 megabytes.
+- `input2.bin` is now 1 megabytes.
+- **Transmission of NODE2 must finish before NODE1.**
+- **The received files must be error free.**
+- Grading
 
-Check settings are alomost the same as Part3.
-
-TAs provide one Jamming source.
-
-The group provides the interface to connect the jamming source.
-
-The topology is shown in Figure 7.
-
-CK(4 points). 'INPUT1to2.bin' of 2MB and 'INPUT2to1.bin' of 1MB are provided.
-
-NODE1: transmits INPUT1to2.bin to NODE2, store the received file to OUTPUT2to1.bin
-
-NODE2: transmits INPUT2to1.bin to NODE1, store the received file to OUTPUT1to2.bin
-
-Jamming Src: play 'Jamming.wav'
-
-The transmission of NODE2 must be started immediately after the start of NODE1. The transmission of NODE2 must be finished before NODE1. The received files must be error free. The rank is determined by the transmission time of NODE1.
-
-| Rank | Points |
-| --- | --- |
-| 1 | 100% |
-| 2 | 50% |
-| 3 | 25% |
-| 4 | 12.5% |
-| 5 | 0% |
+| Rank | Percentage |
+| ---- | ---------- |
+| 1    | 100%       |
+| 2    | 50%        |
+| 3    | 25%        |
+| 4    | 12.5%      |
+| 5+   | 0%         |

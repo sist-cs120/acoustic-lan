@@ -25,3 +25,16 @@ Since we are only concerned about building a physical link so far, there is no n
 | a > 99%       | 100%       |
 | 80% < a < 99% | 80%        |
 | a < 80%       | 0%         |
+
+```sh
+# On both nodes
+autograder.py --random-bytes 1000 --seed <seed> > input.bin
+
+# NODE1
+athernet --node 1 --send input.bin
+
+# NODE2
+athernet --node 2 --receive output.bin
+
+autograder.py --diff input.bin output.bin
+```
