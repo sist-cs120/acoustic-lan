@@ -28,8 +28,8 @@ Figure 7 Network Topology
 - TA starts by playing the jamming source.
 - NODE1 initiates the transmission of 6250 bytes of data to NODE2.
 - NODE2 initiates the transmission of 5000 bytes of data to NODE1. (immidiately after NODE1)
-- NODE1 saves received data to `output.bin`
-- NODE2 saves received data to `output.bin`
+- NODE1 saves received data to `output2.bin`
+- NODE2 saves received data to `output1.bin`
 - **NODE2 should finish the transmission before NODE1.**
 - **Data transmitted by both nodes should be error free.**
 - Timing requirement
@@ -40,12 +40,12 @@ autograder.py --random-bytes 6250 input1.bin
 autograder.py --random-bytes 5000 input2.bin
 
 # On NODE1
-athernet --node 1 --send input1.bin
-autograder.py --diff input2.bin output.bin
+athernet --node 1 --send input1.bin --receive output2.bin
+autograder.py --diff input2.bin output2.bin
 
 # On NODE2
-athernet --node 2 --send input2.bin
-autograder.py --diff input1.bin output.bin
+athernet --node 2 --send input2.bin --receive output1.bin
+autograder.py --diff input1.bin output1.bin
 ```
 
 

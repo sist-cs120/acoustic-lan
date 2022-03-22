@@ -2,7 +2,7 @@
 
 Up till now, we have been using an unreliable link to transmit data. If the physical frame is corrupted or dropped, there is way of knowing it. Thus the goal of this part to implement a reliable link. To ensure data integrity, add a checksum field to your mac frame. Additionally, the receiver should send an ACK frame to the sender acknowledging the frame is received correctly. (Consider adding a type/ack field) We do not impose restriction on the implementation of your reliable link. Whether it is half or full duplex, since there are now 2 (wires) instead of 1 channel (air). To get you bootstrapped, take a look at the simple stop-and-wait state machine defined in the [appendix](/project_2/appendix.md).
 
-To be able to send and receive at the same time, you'll at least 2 threads. One thread will be used to send data, and the other thread will be used to receive data. Make sure you use thread safe data structures. Concurrency bugs are subtle and could take a while to figure out.
+To be able to send and receive at the same time, you'll need at least 2 threads. One thread will be used to send data, and the other thread will be used to receive data. Make sure you use thread safe data structures. Concurrency bugs are subtle and could take a while to figure out.
 
 ### Tips
 - You may want to use thread safe data structures in delivering data between threads.

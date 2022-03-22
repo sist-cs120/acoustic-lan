@@ -11,10 +11,10 @@ For example, add a MACPING/MACPONG type to the frame type field. The sender send
 ### Example
 ```
 # MacPing output
-# {seconds since program start}, {total pings sent}, {total pongs received}, {round trip time in microseconds}
-1.00, 8, 8, 110
-2.01, 16, 16, 90
-3.00, 24, 24, 101
+# {total pings sent}, {total pongs received}, {round trip time in microseconds}
+1, 1, 110
+2, 2, 90
+3, 3, 101
 ...
 ```
 

@@ -25,13 +25,9 @@ Figure 1 Project2 Overview
 [1] Sora: High Performance Software Radio Using General Purpose Multi-core Processors [https://www.usenix.org/legacy/events/nsdi09/tech/full\_papers/tan/tan.pdf](https://www.usenix.org/legacy/events/nsdi09/tech/full_papers/tan/tan.pdf)
 
 [2] WARP CSMAMAC [https://warpproject.org/trac/wiki/CSMAMAC](https://warpproject.org/trac/wiki/CSMAMAC)
-
 [3] WARP CSMAMAC Src
-
 [https://warpproject.org/trac/browser/ResearchApps/MAC/CSMAMAC/csmaMac.c](https://warpproject.org/trac/browser/ResearchApps/MAC/CSMAMAC/csmaMac.c)
-
 [4] NS3 MAC Low [https://www.nsnam.org/doxygen/mac-low\_8cc\_source.html](https://www.nsnam.org/doxygen/mac-low_8cc_source.html)
-
 [5] GNURadio MAC Report [http://gnumac.wikispaces.com/file/view/final-project.pdf](http://gnumac.wikispaces.com/file/view/final-project.pdf)
 
 Page **17** of **17**
