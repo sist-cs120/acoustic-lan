@@ -8,46 +8,25 @@ Therefore, this part is to manually build NAT for the Athernet Gateway. Check mo
 
 Figure 3 Frame Structure
 
-Tips:
+### Tips
 
-a. If you use different programming languages to implement the Athernet transceiver and the NAT table, the network packets between them can be shared through a temporary file.
+- If you use different programming languages to implement the Athernet transceiver and the NAT table, the network packets between them can be shared through a temporary file.
 
-Checkpoints:
-
-The group provides three devices: NODE1, NODE2 and NODE3.
-
-The network topology is shown in Figure 2.
+### Device
+- NODE1: transmits messages in 'INPUT.txt' to NODE3
+- NODE2: NAT
+- NODE3: displays IP, ports and payload of the received UDP packets.
 
 The IP of the Athernet interface of NODE1 is 192.168.1.2, the default gateway is 192.168.1.1
-
 The IP of the Athernet interface of NODE2 is 192.168.1.1
+
+### Checkpoint
+
 
 The TA provides a TXT file 'INPUT.txt' which contains 30 lines. Each line is a message. The length of a message is less than 40 bytes (40 characters). A sample 'INPUT.txt' with two messages is provided.
 
 CK1(2 points).
 
-NODE1: transmits messages in 'INPUT.txt' to NODE3
 
-NODE2: NAT
-
-NODE3: displays IP, ports and payload of the received UDP packets.
-
-The transmission must be correctly finished within 30 seconds.
-
-| <30s | -0% |
-| --- | --- |
-| >30s | -100% |
-
-CK2(2 points).
-
-NODE1: displays IP, ports and payload of the received UDP packets.
-
-NODE2: NAT
-
-NODE3: transmits messages in 'INPUT.txt' to NODE1
-
-The transmission must be correctly finished within 30 seconds.
-
-| <30s | -0% |
-| --- | --- |
-| >30s | -100% |
+- Redo the experiment with NODE1 as the receiver and NODE3 as the sender.
+- **The transmission must be correctly finished within 30 seconds.**

@@ -10,18 +10,14 @@ Socket API provides a convenient interface to send and receive UDP packets. Writ
 
 Figure 2 Network Topology
 
-Checkpoints:
+### Checkpoints
+- NODE2: transmits UDP packets to NODE3 once per second for 10 seconds
+- NODE3: displays IP, ports and payload of the received UDP packets.
 
 The group provides two devices: NODE2 and NODE3
 
 CK (2 points).
 
-NODE2: transmits UDP packets to NODE3 once per second for 10 seconds
-
-NODE3: displays IP, ports and payload of the received UDP packets.
-
-Tips:
-
-a. Be careful about your binding IP address, especially when you have multiple network interface cards.
-
-b. Be careful about your firewall settings. You may want to disable or add whitelist in the system firewall and firewall applications when necessary.
+### Tips
+- Be careful about your binding IP address, especially when you have multiple network interface cards.
+- Be careful about your firewall settings. You may want to disable or add whitelist in the system firewall and firewall applications when necessary.

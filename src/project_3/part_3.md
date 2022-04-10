@@ -10,32 +10,17 @@ Second, NODE2 should be able to translate ICMP echo packets. As the ICMP is a pr
 
 Third, NODE2 should be able to send and receive ICMP echo packets to and from NODE3. ICMP echo packets, especially ICMP Echo Reply, are normally handled by the OS and are hidden to the normal socket. In order to capture the ICMP Echo Reply from NODE3, you may want to use the raw socket [4]. When forwarding ICMP Echo Request from NODE1, the raw socket is also a good choice to fully customize your packets.
 
-Tips:
-
-1. Some network interface cards do not support raw socket.
-
-Checkpoints:
-
+### Device
 The group provides two devices: NODE1, NODE2
-
 TAs provide NODE3 with Ubuntu
 
-The network topology is shown in Figure 2.
+### Tips
 
-The IP of the Athernet interface of NODE1 is 192.168.1.2, the default gateway is 192.168.1.1
+- Some network interface cards do not support raw socket.
 
-The IP of the Athernet interface of NODE2 is 192.168.1.1
+### Checkpoints:
 
-CK1(1 points).
-
-NODE1: sends ICMP Echo Request to NODE 3 once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.
-
-NODE2: NAT
-
-CK2(1 points).
-
-NODE1: sends ICMP Echo Request to 119.75.217.26 (www.baidu.com) once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.
-
-NODE2: NAT
-
-(Tasks with 'Optional' tag are optional tasks. The instructor is responsible for checking and grading the optional tasks. Contact the instructor to check if you have finished one or more of them. In this project, Part 4 and Part 5 are checked by TAs.)
+- The IP of the Athernet interface of NODE1 is 192.168.1.2, the default gateway is 192.168.1.1
+- The IP of the Athernet interface of NODE2 is 192.168.1.1
+- NODE1 sends ICMP Echo Request to NODE 3 once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.
+- NODE1 sends ICMP Echo Request to 119.75.217.26 (www.baidu.com) once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.

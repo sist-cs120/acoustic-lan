@@ -1,4 +1,4 @@
-# Part 5 ToyNet
+## Part 5 ToyNet
 
 The current Athernet is developed by each group independently, but a real network is about opening, sharing, and cooperating. This task is to reward the groups who are able to interconnect to each other. Figure 4 is the network topology of three connected groups. Your goal to ensure that every Node1x can ping each other.
 
@@ -6,28 +6,22 @@ The current Athernet is developed by each group independently, but a real networ
 
 Figure 4 Network Topology for Three Connected Groups
 
-Tips:
-
-1. You can design your own ping utility, not necessarily rely on the ping of your system, but should make sure the 'ping' packets arrived at NODE2x are ICMP pings.
-
-Checkpoints:
-
+### Device
 Each group provides two devices: NODE1x, NODE2x
 
-The network topology for three connected groups is shown in Figure 4.
+### Tips
 
-CK(4 points).
+- You can design your own ping utility, not necessarily rely on the ping of your system, but should make sure the 'ping' packets arrived at NODE2x are ICMP pings.
 
-NODE1x of each group should be able to ping NODE1x of other groups:
+### Checkpoint
 
-The command is similar to Part4.
+- The network topology for three connected groups is shown in Figure 4.
+- NODE1x of each group should be able to ping NODE1x of other groups:
+- The command is similar to Part4.
+- NODE1x: ping NODE2y\_IP -p XXXX
+- The reward is proportional to the number of connected groups (can ping each other).
 
-NODE1x: ping NODE2y\_IP -p XXXX
-
-The reward is proportional to the number of connected groups (can ping each other).
-
-| Connected Groups |
- |
+| Connected Groups | Percentage |
 | --- | --- |
 | 2 | -50% |
 | 3 | -25% |
