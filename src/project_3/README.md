@@ -1,20 +1,11 @@
 # Project 3 Gateway
 
-**Due Date: Nov. 29, 2020**
-
 (8 points + 11 points)
 
 Suggested workload: 2~4 FULL days
 
-**Please read the following instructions carefully:**
-
-- This project is to be completed by each group **individually**.
-- Submit your code through Blackboard. The submission is performed by one of the group members.
-- Each group needs to submit the code **once and only once**. Immediately after TAs' checking.
-
 ### Overview
-
-The goal of this project is to build a gateway for the Athernet. In this way, Athernet devices are able to connect to the Internet. A network gateway may contain multiple network functions, including DHCP server, routing, switching and so on. This project focuses on the aspect of interconnecting different protocols, i.e., how to translate Athernet traffic to run on existing Internet infrastructure, and vice versa. After finishing this project, the TCP/IP traffic should be able to run over the Athernet network that you have built in Project2.
+Past projects have been mostly focused on the physical link and reliable transmission, which is mainly point-to-point. In this project, we'll be connecting the Athernet nodes to the Internet. Unfortunately, a challenge remains that Athernet and Internet devices talks differently (i.e. they use different protocols). Therefore, the goal of this project is to build a gateway for the Athernet. A network gateway may contain multiple network functions, including DHCP server, routing, switching and so on. This project focuses on the aspect of interconnecting different protocols, i.e., how to translate Athernet traffic to run on existing Internet infrastructure, and vice versa. After finishing this project, the TCP/IP traffic should be able to run over the Athernet network that you have built in Project2.
 
 We consider the situation in Figure 1, where Athernet nodes connect to an Athernet Gateway, and then get access to the Internet (the Athernet Gateway gets access to the Internet through the WiFi Access point, which is the gateway for the Athernet Gateway. It's not uncommon for such hierarchical gateways in today's Internet).
 
@@ -26,7 +17,7 @@ The functionality of the Athernet Gateway can be as simple as a bridge, i.e., de
 
 Another design choice is shown in Figure1. On the one hand, the Athernet Gateway handles the WiFi connection with existing utilities from OS. On the other hand, it handles Athernet connections from Athernet Nodes. Note that in this situation, Athernet nodes are out of the domain of the WiFi network, and thus require a different IP subnet for addressing. Since we lack independent IP addresses, NAT is required in the Athernet Gateway to translate the Athernet traffic.
 
-(Hierarchy of Tasks. Tasks are graded according to their hierarchy. A full score of one part automatically guarantees the full score of its subparts. In this project, the hierarchy is denoted as Part1<Part2; Part1<Part3<Part5; Part4<Part5.)
+(Hierarchy of Tasks. Tasks are graded according to their hierarchy. A full score of one part automatically guarantees the full score of its subparts. In this project, the hierarchy is denoted as `Part1<Part2; Part1<Part3<Part5; Part4<Part5`.)
 
 
 ### Reference and Useful Links
