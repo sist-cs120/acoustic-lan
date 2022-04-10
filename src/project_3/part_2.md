@@ -1,6 +1,4 @@
-## Part 2 NAT
-
-The first step to build a gateway is to manipulate the TCP/IP traffic. Although different operating systems handle network traffic differently, they provide a similar interface to send/receive TCP/IP packets: the Network Socket. Refer to the textbook for more information about socket programming in C/C++. You can also use Python wrapper for socket API. If you are using Java, be noted that native Java socket API lacks the ability to manipulate raw IP packets and thus you might need to either find third party Java packages for low level socket or integrate Java with other language to finish Part3.
+## Part 2 Network Address Translation
 
 Network Address Translation (NAT) is a design choice to connect the Athernet to the Internet. In Figure 2. NODE2 has two network interfaces. One is the WiFi interface which is used to connect to the wireless LAN. The other consists of the audio card and the previous two projects you have finished. At a high level, the two network interfaces have very similar functionalities. From the operating system's viewpoint, however, they are different. Normally, the network traffic of the OS passes through the TCP/IP stack. The WiFi interface functioning below the TCP/IP stack is one of the standard I/O devices for TCP/IP segments. However, the I/O of Project 2 hasn't been hooked to the TCP/IP stack and thus the operating system cannot recognize the Athernet interface. Thus, existing NAT tools based on TCP/IP stack cannot be directly used to realize NAT in the Athernet Gateway.
 
@@ -11,24 +9,25 @@ Therefore, this part is to manually build NAT for the Athernet Gateway. Check mo
 Figure 3 Frame Structure
 
 ### Tips
-
 - If you use different programming languages to implement the Athernet transceiver and the NAT table, the network packets between them can be shared through a temporary file.
 
 ### Device
-- NODE1: transmits messages in 'INPUT.txt' to NODE3
-- NODE2: NAT
-- NODE3: displays IP, ports and payload of the received UDP packets.
+- NODE1: Sender, Athernet interface IP: 192.168.1.2
+- NODE2: Gateway, Athernet interface IP: 192.168.1.1
+- NODE3: Receiver
 
-The IP of the Athernet interface of NODE1 is 192.168.1.2, the default gateway is 192.168.1.1
-The IP of the Athernet interface of NODE2 is 192.168.1.1
-
-### Checkpoint
-
-
-The TA provides a TXT file 'INPUT.txt' which contains 30 lines. Each line is a message. The length of a message is less than 40 bytes (40 characters). A sample 'INPUT.txt' with two messages is provided.
-
-CK1(2 points).
-
-
-- Redo the experiment with NODE1 as the receiver and NODE3 as the sender.
+### Checkpoint 1
+- Report your NAT table to TA.
+- TA provides a text file `input.txt`
+    - Contains 30 lines of messages.
+    - The length of a message is less than 40 bytes.
+    - A sample `input.txt` with two messages is provided.
+- Initiate NODE3 to wait for incoming UDP packets.
+- Initiate NODE2 to ready Network Address Translation.
+- NODE1 sends IP packets to NODE2 via its Athernet interface.
+- NODE2 extracts the UDP packet (IP payload) and sends it to NODE3 via the WiFi interface.
+- NODE3 receives the UDP packet and prints it out.
 - **The transmission must be correctly finished within 30 seconds.**
+
+### Checkpoint 2
+- Redo the experiment with NODE1 as the receiver and NODE3 as the sender.

@@ -21,7 +21,7 @@
     - [Appendix](./project_2/appendix.md)
 - [Project 3 Gateway](./project_3/README.md)
     - [Socket Programming](./project_3/part_1.md)
-    - [NAT](./project_3/part_2.md)
+    - [Network Address Translation](./project_3/part_2.md)
     - [ICMP Echo](./project_3/part_3.md)
     - [Ping from External Network*](./project_3/part_4.md)
     - [ToyNet*](./project_3/part_5.md)
