@@ -26,6 +26,6 @@ Figure 2 Network Topology
     - 1 packet per second.
     - Payload is 20 bytes of random alpha-numeric characters.
 - NODE3 prints the received UDP packets.
-    - Format is `sender_ip:sender_port, receiver_ip:receiver_port, payload`.
+    - Format is `sender_ip:port, receiver_ip:port, payload`.
     - Put a line break between each packet.
     - Example `192.168.1.3:1234, 192.168.1.4:4321, ...`.

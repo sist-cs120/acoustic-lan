@@ -30,7 +30,7 @@ Third, NODE2 should be able to send and receive ICMP echo packets to and from NO
 - NODE3 replies with ICMP Echo Reply to NODE1. (TA's computer)
 - NODE2 performs NAT and forward the ICMP packet to NODE1 via the Athernet interface.
 - NODE1 prints the ICMP Echo Reply.
-    - Format is `sender_ip:sender_port, receiver_ip:receiver_port, latency, payload`.
+    - Format is `sender_ip:id, receiver_ip:id, latency, payload`.
     - Latency should be an integer number of milliseconds.
 - **The transmission must be correctly finished within 30 seconds.**
 
