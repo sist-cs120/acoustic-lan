@@ -10,17 +10,29 @@ Second, NODE2 should be able to translate ICMP echo packets. As the ICMP is a pr
 
 Third, NODE2 should be able to send and receive ICMP echo packets to and from NODE3. ICMP echo packets, especially ICMP Echo Reply, are normally handled by the OS and are hidden to the normal socket. In order to capture the ICMP Echo Reply from NODE3, you may want to use the raw socket [4]. When forwarding ICMP Echo Request from NODE1, the raw socket is also a good choice to fully customize your packets.
 
-### Device
-The group provides two devices: NODE1, NODE2
-TAs provide NODE3 with Ubuntu
-
 ### Tips
-
 - Some network interface cards do not support raw socket.
+- Some programming languages may not provide low-level access to raw sockets. You can store the ICMP packet in a temporary file and send it via the system's raw socket programming interface.
+- Opening a raw socket usually requires superuser privilege.
 
-### Checkpoints:
+### Device
+- NODE1: Sender, Athernet interface IP: 192.168.1.2
+- NODE2: Gateway, Athernet interface IP: 192.168.1.1
+- NODE3 is provided by TA.
 
-- The IP of the Athernet interface of NODE1 is 192.168.1.2, the default gateway is 192.168.1.1
-- The IP of the Athernet interface of NODE2 is 192.168.1.1
-- NODE1 sends ICMP Echo Request to NODE 3 once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.
-- NODE1 sends ICMP Echo Request to 119.75.217.26 (www.baidu.com) once per second for 10 seconds; at the same time, it displays IP, payload and latency of the received ICMP packets.
+### Checkpoint 1
+- Report your NAT table to TA.
+- Initiate NODE2 to ready Network Address Translation.
+- NODE1 sends 10 ICMP packets to NODE2 via its Athernet interface.
+    - 1 packet per second.
+    - Payload could be any string up to your choice. (e.g., "CS120 is fun!")
+- NODE2 performs NAT and forward the ICMP packet to NODE3 via the WiFi interface.
+- NODE3 replies with ICMP Echo Reply to NODE1. (TA's computer)
+- NODE2 performs NAT and forward the ICMP packet to NODE1 via the Athernet interface.
+- NODE1 prints the ICMP Echo Reply.
+    - Format is `sender_ip:sender_port, receiver_ip:receiver_port, latency, payload`.
+    - Latency should be an integer number of milliseconds.
+- **The transmission must be correctly finished within 30 seconds.**
+
+### Checkpoint 2
+- Redo the experiment with destination set to `www.baidu.com`.
