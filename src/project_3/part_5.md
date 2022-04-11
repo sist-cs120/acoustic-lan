@@ -7,22 +7,21 @@ The current Athernet is developed by each group independently, but a real networ
 Figure 4 Network Topology for Three Connected Groups
 
 ### Device
-Each group provides two devices: NODE1x, NODE2x
+- NODE1x: Sender/Replier for each group
+- NODE2x: Gateway for each group
+- The network topology for three connected groups is shown in Figure 4.
 
 ### Tips
-
-- You can design your own ping utility, not necessarily rely on the ping of your system, but should make sure the 'ping' packets arrived at NODE2x are ICMP pings.
+- You can design your own ping utility instead of relying on the `ping` utility of your operating system. But you should make sure that the packets send/replied are still valid ICMP packets.
 
 ### Checkpoint
 
-- The network topology for three connected groups is shown in Figure 4.
-- NODE1x of each group should be able to ping NODE1x of other groups:
-- The command is similar to Part4.
-- NODE1x: ping NODE2y\_IP -p XXXX
+- Redo [Part 4](/project_3/part_4.md) with NODE3 replaced by NODE2y and NODE1y of another group.
+- Check all Athernet nodes can ping each other.
 - The reward is proportional to the number of connected groups (can ping each other).
 
 | Connected Groups | Percentage |
-| --- | --- |
-| 2 | -50% |
-| 3 | -25% |
-| 4 | -0% |
+| ---------------- | ---------- |
+| 2                | 50%        |
+| 3                | 75%        |
+| 4                | 100%       |
