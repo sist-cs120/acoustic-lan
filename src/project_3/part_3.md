@@ -18,7 +18,7 @@ Third, NODE2 should be able to send and receive ICMP echo packets to and from NO
 ### Device
 - NODE1: Sender, Athernet interface IP: 192.168.1.2
 - NODE2: Gateway, Athernet interface IP: 192.168.1.1
-- NODE3 is provided by TA.
+- NODE3: Replier, provided by TA
 
 ### Checkpoint 1
 - Report your NAT table to TA.
