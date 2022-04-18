@@ -1,4 +1,4 @@
-# Part 1 FTP Client for Athernet
+## Part 1 FTP Client for Athernet
 
 Unlike previous projects, FTP is a well-defined, yet quite simple protocol. Its RFC [1] is the most accurate and detailed description for guiding the implementation, thus this project description only contains a necessary introduction. As we are not going to implement an FTP server, the client part (USER-FTP) is the main focus.
 
@@ -28,7 +28,9 @@ The Network Topology is shown in Figure 2
 - TA input commands `USER PASS PWD CWD PASV LIST RETR` and check the output
     - Credits are given according to the table below
     - For the RETR command, file is selecte by TA with size < 1MB.
-- TA input invalid commands. **The client should print out error messages without crashing.**
+- TA input invalid commands.
+    - The client should print out error messages and prompt the user for another command.
+    - **Crashing, exiting, hanging, or closing the connection will receive no credit.**
 
 | Control Commands                 | Percentage |
 | -------------------------------- | ---------- |
