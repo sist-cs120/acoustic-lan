@@ -1,4 +1,4 @@
-## Part 1 Socket Programming
+## Socket Programming
 
 This part is mostly for you to get familiar with the basic socket programming. A network socket is abstraction provided by the operating system, usually exposed to the user via system programming apis (In Linux, it is the `socket()` syscall). However, directly invoking syscalls to setup sockets is not very inconvenient. Modern programming languages usually come with builtin support for TCP streams and UDP sockets in their standard library. These APIs are exposed at a higher level of abstraction, consistent with their idioms. They also reduce the need for bindings and boilerplate code. (For example, `import sockets` in python and `std::net::UdpSocket` in Rust)
 

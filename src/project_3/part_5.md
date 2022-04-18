@@ -1,4 +1,4 @@
-## Part 5 ToyNet
+## ToyNet*
 
 The current Athernet is developed by each group independently, but a real network is about opening, sharing, and cooperating. This task is to reward the groups who are able to interconnect to each other. Figure 4 is the network topology of three connected groups. Your goal to ensure that every Node1x can ping each other.
 

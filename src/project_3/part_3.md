@@ -1,4 +1,4 @@
-## Part 3 ICMP Echo
+## ICMP Echo
 
 Internet Control Message Protocol (ICMP) is one of the most import protocols running over IP. As the name suggests, ICMP targets 'control' rather than transmitting data. ICMP defines several useful messages to indicate and debug network errors. ICMP echo is the most basic one. ICMP echo defines a send and reply protocol. Whenever a receiver receives an ICMP Echo Request message, the receiver is responsible for replying an ICMP Echo Reply message to the request sender as soon as possible.
 

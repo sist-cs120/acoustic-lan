@@ -1,4 +1,4 @@
-## Error Correction Code
+## Error Correction Code*
 
 Current acoustic link is susceptible to noise. You can add redundancy in your bits to resist errors caused by noise. This procedure is called coding. There are many coding schemes. Refer to [5] for more information (Convolutional code and Fountain code are suggested ones in this project).
 

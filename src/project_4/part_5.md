@@ -1,4 +1,4 @@
-## Part 5 Final Report*
+## Final Report*
 
 Use 1000 to 2000 words to summarize your projects (Project1 to Project4). The content of the report may include:
 

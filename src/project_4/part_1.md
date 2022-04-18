@@ -1,4 +1,4 @@
-## Part 1 FTP Client for Athernet
+## FTP Client for Athernet
 
 Unlike previous projects, FTP is a well-defined, yet quite simple protocol. Its RFC [1] is the most accurate and detailed description for guiding the implementation, thus this project description only contains a necessary introduction. As we are not going to implement an FTP server, the client part (USER-FTP) is the main focus.
 

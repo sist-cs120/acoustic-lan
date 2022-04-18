@@ -1,4 +1,4 @@
-## Part 2 The NAT Should be an NAT Only
+## The NAT Should be an NAT Only
 
 One possible implementation of Part 1 satisfying the check points is to make the NAT as an FTP proxy. The NAT decodes Athernet packets and, according the content, issues FTP commands locally to the remote server. However, an NAT should not work beyond the IP layer. A more serious concern is security. It does not make sense to let the NAT know your FTP password and the implementation cannot be extended to secure FTP protocols that widely used today, e.g., SFTP. In short, the NAT should be transparent to the FTP protocol. It is the Athernet Note that makes TCP connections to the FTP server other than the NAT node.
 
