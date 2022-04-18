@@ -4,3 +4,4 @@ TCP is much more complex than UDP. TCP has flow control, sliding window, and con
 
 ### Checkpoint
 - Redo [Part 2](/project_3/part_2.md) with TCP protocol instead.
+- TA check implementation of the TCP stack.
