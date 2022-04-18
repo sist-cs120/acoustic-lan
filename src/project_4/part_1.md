@@ -10,37 +10,38 @@ There are several FTP control commands, such as USER, PASS, PWD, CWD, PASV, LIST
 
 Figure 2 Network Topology for FTP Application
 
-Checkpoints:
+### Tips:
+- You may want to use Wireshark with proper filter to trace the working process of FTP.
+- You can use existing FTP clients to see how they handle the input.
+
+## Devices
+- NODE1: FTP client
+- NODE2: NAT
+- NODE3: FTP server (Provided by TA)
 
 The Network Topology is shown in Figure 2
 
-The group provides two devices: NODE1 and NODE2.
+### Checkpoint
 
-NODE3 is a public FTP Server, which supports anonymous login. The list of suggested test FTP Servers is given in 'serverlist.txt'.
+- Initiate NODE2 to ready NAT
+- Initiate NODE1 to start FTP client, showing a prompt for user command
+- TA input commands `USER PASS PWD CWD PASV LIST RETR` and check the output
+    - Credits are given according to the table below
+    - For the RETR command, file is selecte by TA with size < 1MB.
+- TA input invalid commands. **The client should print out error messages without crashing.**
 
-CK (6 points).
+| Control Commands                 | Percentage |
+| -------------------------------- | ---------- |
+| USER PASS PWD                    | 50%        |
+| USER PASS PWD CWD PASV LIST      | 83%        |
+| USER PASS PWD CWD PASV LIST RETR | 100%       |
 
-NODE1: the FTP client is connected to NODE3.
+### Example
+```sh
+athernet --ftp-client
 
-NODE2: NAT
-
-This task is graded according to the number of supported control commands of the FTP client.
-
-The client provides an interface for TAs to input commands and displays corresponding responses from the FTP server. The FTP client must be able to be tolerant of various or even incorrect input and display correct responses.
-
-In order to obtain corresponding credits, the client must support a full set of commands from one of the sets in the following table.
-
-For RETR command, the downloading file is selected from FTP server by TAs and its file size is less than 1MB.
-
-| Control Commands |
- |
-| --- | --- |
-| USER PASS PWD | -50% |
-| USER PASS PWD CWD PASV LIST | -17% |
-| USER PASS PWD CWD PASV LIST RETR | -0% |
-
-Tips:
-
-a. You may want to use Wireshark with proper filter to trace the working process of FTP.
-
-b. You can use existing FTP clients to see how they handle the input.
+(ftp) USER anonymous
+(ftp) PASS anonymous
+(ftp) PWD
+...
+```
