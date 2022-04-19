@@ -14,9 +14,7 @@ In order to finish this project and remaining projects, the following accessorie
 
 Contact TAs to borrow the accessory set.
 
-![](RackMultipart20220302-4-19oxl2x_html_2713465d53545674.png)
-
-Figure 1 Project2 Overview
+![Project 2 Overview](/media/proj2_overview.png)
 
 (Hierarchy of Tasks. Tasks are graded according to their hierarchy. A full score of one part automatically guarantees the full score of its subparts. In this project, Part 1 is a subpart of Part 2 and Part 3. Part 2 is a subpart of Part 3. The hierarchy is denoted as Part1< Part2 <Part3.)
 

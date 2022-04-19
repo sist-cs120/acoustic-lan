@@ -6,9 +6,7 @@ In this part you will perform modulation and demodulation. That is, converting d
 
 In PSK, suppose phase 0 is used to represent '0' and phase pi is used to represent '1'. It is easy to imagine that the wave for conveying bits is the concatenation of several wave segments in Figure 2.
 
-![](RackMultipart20220302-4-iik7fu_html_76955159c989f910.png)
-
-Figure 2 PSK Example
+![Modulation](/media/modulation.png)
 
 Further, suppose the carrier wave is 10 kHz and the bit rate is 1000 Hz, each wave segment in Figure 2 lasts for 1/1000 s, i.e., there are 10 cycles of the carrier wave in each segment. Similarly, if you want to reduce the bit rate to 500 Hz, each wave segment should last for 1/500 s, and there are 20 cycles in each segment. On the other hand, if the carrier wave is 20 kHz, the number of the cycles are doubled in the above description.
 

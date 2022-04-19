@@ -4,16 +4,7 @@ A problem with excessively long frame is that the sender and receiver could get 
 
 To combat this issue, we periodically synchronize the receiver and sender. We do this by adding a **preamble** and keeping frames short. A preamble is distinctive pattern that signals the beginning of a frame. Unlike Ethernet preamble, which is a unique bit sequence, we'll use analog signals to represent the preamble. A preamble that has worked well for most student in past semesters is a sinusoid with first increasing then decreasing frequencies. Frame detection usually starts by collecting samples into a buffer. Once the buffer is filled enough samples (longer than the length of the preamble), repeatedly compute the **autocorrelation** of the received signal with the preamble, i.e. taking the dot product of the collected samples and the predefined preamble samples. The autocorrelation is significantly larger when the collected samples exactly matches the preamble than when the samples are slightly shifted, or is computed against some random noise. Thus we can detect the presence of a frame by setting a threshold on the autocorrelation. Once the occurrence of a new frame is confirmed, the next thing is to find out the accurate boundaries of the symbol. You can develop your own way. One suggested way is to leverage autocorrelation again. A unique and long preamble can help to find out the accurate boundary of the frame. See the Matlab example to see how to design a unique header.
 
-
-- **Adding a Header**. A header of a frame is used to help the receiver to find out the accurate start of a frame, i.e. synchronize to the frame. Therefore, the header is normally a predefined special wave pattern that can help with synchronization. After adding the header, samples that you are going to fill into the DAC may have the structure in Figure 3:
-
-![](RackMultipart20220302-4-iik7fu_html_ab6f260d556ba0b9.png)
-
-Figure 3 Adding a Header
-
-- **Frame Detection**.
-
-- **Synchronization**.
+![Frame Detection](/media/phy_frame.png)
 
 ### Devices
 - NODE1: computer for frame detection.

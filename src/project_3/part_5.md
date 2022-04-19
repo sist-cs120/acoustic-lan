@@ -2,9 +2,7 @@
 
 The current Athernet is developed by each group independently, but a real network is about opening, sharing, and cooperating. This task is to reward the groups who are able to interconnect to each other. Figure 4 is the network topology of three connected groups. Your goal to ensure that every Node1x can ping each other.
 
-![](RackMultipart20220302-4-1606c2j_html_b6708c49f804090c.png)
-
-Figure 4 Network Topology for Three Connected Groups
+![ToyNet](/media/toynet.png)
 
 ### Device
 - NODE1x: Sender/Replier for each group

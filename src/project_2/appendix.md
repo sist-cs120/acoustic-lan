@@ -5,7 +5,7 @@ To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray pro
 
 figure 3 send-and-pray state machine
 
-![](RackMultipart20220302-4-19oxl2x_html_35ba30d4cd80dca2.png)
+![Send and Pray State Machine](/media/send_pray_fsm.png)
 
 the goal of this task is to help you polish your physical layer code. making a clear abstraction of the functionalities of the physical layer from project 1 helps a lot in implementing mac protocols. for example, the following primitives are necessary ones that the physical layer interface must support for implementing the above simple protocol:
 
@@ -17,8 +17,6 @@ the goal of this task is to help you polish your physical layer code. making a c
 
 it is easy to extend the send-and-pray protocol to a more effective one: stop-and-wait ack protocol. 'upgrading' the physical link in project1 with ack ability will provide reliability in data communication. a reference stop-and-wait protocol is shown in figure 4.
 
-![](RackMultipart20220302-4-19oxl2x_html_4baae2d3e9586ef1.png)
-
-Figure 4 Stop-and-wait State Machine
+![Stop and Wait State Machine](/media/stop_wait_fsm.png)
 
 The state machine contains more states and events than send-and-pray protocol. One obvious difference is that, after correctly receiving a frame, the node needs to reply an ACK immediately. Note that the state machine does not contain full details of this protocol. For example, when handling Tx\_DONE event, MAC thread should set timeout counter for waiting ACK, and if the ACK is not received, the packet should be retransmitted.

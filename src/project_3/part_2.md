@@ -4,9 +4,7 @@ Network Address Translation (NAT) is a design choice to connect the Athernet to 
 
 Therefore, this part is to manually build NAT for the Athernet Gateway. Check more information about NAT on Lecture Slides. In order to talk with the Internet, the traffic over Athernet must 'speak' TCP/IP, i.e., the payload of the Athernet MAC frame must contain a TCP/IP header. Specifically, if the protocol is UDP, the frame structure is shown in Figure 3. After receiving an Athernet frame like Figure 3, NODE2 is responsible for extracting <NODE1\_IP, NODE1\_port#> as the key to construct the NAT table. Also, NODE2 is responsible for repacking the UDP Payload of the Athernet frame to standard network socket with <NODE2\_IP, NODE2\_port#> and then sends it to the Internet through the WiFi interface. On the reverse direction, NODE2 should listen on the specific port# and translate the received packets to Athernet frames. After that, it transmits the frame to NODE1 via the acoustic link.
 
-![](RackMultipart20220302-4-1606c2j_html_d2505fd8e095b784.png)
-
-Figure 3 Frame Structure
+![Frame Structure](/media/tcp_packet.png)
 
 ### Tips
 - If you use different programming languages to implement the Athernet transceiver and the NAT table, the network packets between them can be shared through a temporary file.
@@ -15,6 +13,8 @@ Figure 3 Frame Structure
 - NODE1: Sender, Athernet interface IP: 192.168.1.2
 - NODE2: Gateway, Athernet interface IP: 192.168.1.1
 - NODE3: Receiver
+
+![Topology](/media/proj3_topo.png)
 
 ### Checkpoint 1
 - Report your NAT table to TA.

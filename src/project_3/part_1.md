@@ -4,7 +4,6 @@ This part is mostly for you to get familiar with the basic socket programming. A
 
 You task is to write a program that can send and receive UDP packets.
 
-![](RackMultipart20220302-4-1606c2j_html_61eb1aa84b4cdae1.png)
 
 ### Tips
 - Make sure the WiFi network connection is successfully established in both nodes before programming. You can use your operating system's network utility to connect NODE2 and NODE3 to the campus Wi-Fi network `ShanghaiTech`.
@@ -13,11 +12,12 @@ You task is to write a program that can send and receive UDP packets.
 - Be careful about your firewall settings. You may want to disable or add whitelist in the system firewall and firewall applications when necessary.
 
 ### Device
-- NODE2: sender
-- NODE3: receiver
+- NODE2: UDP packet sender
+- NODE3: UDP packet receiver
 
-Figure 2 Network Topology
- The network topology is shown in Figure2. You can ignore NODE1 in this part.
+![Project 3 Topology](/media/proj3_topo.png)
+
+The network topology is shown above. You can ignore NODE1 in this part.
 
 ### Checkpoint
 - Report ip address and port number of NODE2 and NODE3 to TA.

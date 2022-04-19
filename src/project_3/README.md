@@ -4,14 +4,12 @@
 
 Suggested workload: 2~4 FULL days
 
-### Overview
+## Overview
 Past projects have been mostly focused on the physical link and reliable transmission, which is mainly point-to-point. In this project, we'll be connecting the Athernet nodes to the Internet. Unfortunately, a challenge remains that Athernet and Internet devices talks differently (i.e. they use different protocols). Therefore, the goal of this project is to build a gateway for the Athernet. A network gateway may contain multiple network functions, including DHCP server, routing, switching and so on. This project focuses on the aspect of interconnecting different protocols, i.e., how to translate Athernet traffic to run on existing Internet infrastructure, and vice versa. After finishing this project, the TCP/IP traffic should be able to run over the Athernet network that you have built in Project2.
 
 We consider the situation in Figure 1, where Athernet nodes connect to an Athernet Gateway, and then get access to the Internet (the Athernet Gateway gets access to the Internet through the WiFi Access point, which is the gateway for the Athernet Gateway. It's not uncommon for such hierarchical gateways in today's Internet).
 
-![](RackMultipart20220302-4-1606c2j_html_123832be5d807882.png)
-
-Figure 1 Project3 Overview
+![Project 3 Overview](/media/proj3_overview.png)
 
 The functionality of the Athernet Gateway can be as simple as a bridge, i.e., decoding the Athernet payload and repacking it into WiFi packets, and vice versa, but the problem is that the Athernet Node must be able to handle WiFi authentication, DHCP and many subtle details, which may complicate our project.
 
@@ -31,5 +29,3 @@ Another design choice is shown in Figure1. On the one hand, the Athernet Gateway
 [4] User Space TCP [http://savannah.nongnu.org/projects/lwip/](http://savannah.nongnu.org/projects/lwip/)
 
 [5] Ping through NAT [https://stackoverflow.com/questions/4769587/is-it-possible-pinging-through-nat-from-outside-the-nat-inside](https://stackoverflow.com/questions/4769587/is-it-possible-pinging-through-nat-from-outside-the-nat-inside)
-
-Page **7** of **8**
