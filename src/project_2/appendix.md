@@ -1,9 +1,8 @@
 ## Appendix
 
 
-To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray protocol. A state machine is helpful in describing a protocol. The state machine of the send-and-pray protocol is shown in Figure 3. The node can only be in one of the states at any moment. The transition of the state is driven by some events. The arrows connecting states identify the event and the transition direction.
+To build a CSMA MAC from ground up, a good warm up is a simple send-and-pray protocol. A state machine is helpful in describing a protocol. The state machine of the send-and-pray protocol is shown below. The node can only be in one of the states at any moment. The transition of the state is driven by some events. The arrows connecting states identify the event and the transition direction.
 
-figure 3 send-and-pray state machine
 
 ![Send and Pray State Machine](/media/send_pray_fsm.png)
 
@@ -15,7 +14,7 @@ the goal of this task is to help you polish your physical layer code. making a c
 - buffer: phyrxframe, is shared between phy.rx thread and mac thread. once a frame is correctly received by the physical layer, phy.rx thread will put the frame into this buffer.
 - event: rx\_done, is issued by phy.rx thread, it notifies mac thread to take the frame in phyrxframe and proceed to framedetection state.
 
-it is easy to extend the send-and-pray protocol to a more effective one: stop-and-wait ack protocol. 'upgrading' the physical link in project1 with ack ability will provide reliability in data communication. a reference stop-and-wait protocol is shown in figure 4.
+it is easy to extend the send-and-pray protocol to a more effective one: stop-and-wait ack protocol. 'upgrading' the physical link in project1 with ack ability will provide reliability in data communication. a reference stop-and-wait protocol is shown in figure below.
 
 ![Stop and Wait State Machine](/media/stop_wait_fsm.png)
 

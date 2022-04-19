@@ -1,13 +1,13 @@
 ## ToyNet*
 
-The current Athernet is developed by each group independently, but a real network is about opening, sharing, and cooperating. This task is to reward the groups who are able to interconnect to each other. Figure 4 is the network topology of three connected groups. Your goal to ensure that every Node1x can ping each other.
+The current Athernet is developed by each group independently, but a real network is about opening, sharing, and cooperating. This task is to reward the groups who are able to interconnect to each other. The network topology of three connected groups is shown in the Devices section. Your goal to ensure that every NODE1x can ping each other.
 
-![ToyNet](/media/toynet.png)
 
 ### Device
 - NODE1x: Sender/Replier for each group
 - NODE2x: Gateway for each group
-- The network topology for three connected groups is shown in Figure 4.
+
+![ToyNet](/media/toynet.png)
 
 ### Tips
 - You can design your own ping utility instead of relying on the `ping` utility of your operating system. But you should make sure that the packets send/replied are still valid ICMP packets.

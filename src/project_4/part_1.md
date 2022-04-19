@@ -6,7 +6,6 @@ At a high level, the design philosophy of FTP is simple and direct. The client u
 
 There are several FTP control commands, such as USER, PASS, PWD, CWD, PASV, LIST, RETR, STOR, etc. These commands and their responses are text-based and very similar to those used in Telnet and HTTP. Some of the commands (e.g., LIST: list current directory, RETR: download data, STOR: upload data) can initiate data transmission. Once these commands are executed, the client and server must negotiate new TCP connections to hold the data transmission. There are two methods to negotiate new TCP connections: the Passive Mode (the client connects to the port chosen by the server) and the Active Mode (server uses port 20 to connect to the port chosen by the client). Since the Athernet Node must pass through the NAT to reach the Internet, Passive Mode is the only choice if you are not going implement a stateful NAT (a stateful NAT is able to recognize/remember/modify FTP packets and open correct ports for translating connections initiated by the server in the Active Mode).
 
-![Project 4 Topology](/media/proj4_topo.png)
 
 ### Tips:
 - You may want to use Wireshark with proper filter to trace the working process of FTP.
@@ -17,7 +16,7 @@ There are several FTP control commands, such as USER, PASS, PWD, CWD, PASV, LIST
 - NODE2: NAT
 - NODE3: FTP server (Provided by TA)
 
-The Network Topology is shown in Figure 2
+![Project 4 Topology](/media/proj4_topo.png)
 
 ### Checkpoint
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project will augment the physical data communication link from Project 1 to support mutual communication among multiple nodes. The design goal of this project is very similar to Ethernet. We call it *Athernet*. As Figure 1 shows, a core component of *Athernet* is the mechanism to manage the transmission of each transceiver so that the communication medium can be shared efficiently, i.e., the Medium Access Control (MAC) protocol.
+This project will augment the physical data communication link from Project 1 to support mutual communication among multiple nodes. The design goal of this project is very similar to Ethernet. We call it *Athernet*. A core component of *Athernet* is the mechanism to manage the transmission of each transceiver so that the communication medium can be shared efficiently, i.e., the Medium Access Control (MAC) protocol.
 
 In order to finish this project and remaining projects, the following accessories are provided. Each group is eligible to borrow one set that includes:
 

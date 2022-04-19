@@ -7,7 +7,7 @@ Suggested workload: 2~4 FULL days
 ## Overview
 Past projects have been mostly focused on the physical link and reliable transmission, which is mainly point-to-point. In this project, we'll be connecting the Athernet nodes to the Internet. Unfortunately, a challenge remains that Athernet and Internet devices talks differently (i.e. they use different protocols). Therefore, the goal of this project is to build a gateway for the Athernet. A network gateway may contain multiple network functions, including DHCP server, routing, switching and so on. This project focuses on the aspect of interconnecting different protocols, i.e., how to translate Athernet traffic to run on existing Internet infrastructure, and vice versa. After finishing this project, the TCP/IP traffic should be able to run over the Athernet network that you have built in Project2.
 
-We consider the situation in Figure 1, where Athernet nodes connect to an Athernet Gateway, and then get access to the Internet (the Athernet Gateway gets access to the Internet through the WiFi Access point, which is the gateway for the Athernet Gateway. It's not uncommon for such hierarchical gateways in today's Internet).
+We consider the following situation, where Athernet nodes connect to an Athernet Gateway, and then get access to the Internet (the Athernet Gateway gets access to the Internet through the WiFi Access point, which is the gateway for the Athernet Gateway. It's not uncommon for such hierarchical gateways in today's Internet).
 
 ![Project 3 Overview](/media/proj3_overview.png)
 
